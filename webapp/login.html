@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Login</title>
+    <!-- Bootstrap -->
+   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+		<link href="dropzone.css" rel="stylesheet" media="screen">
+		 <script src="dropzone.js"></script>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	 <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+        <script src="assets/scripts.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+		  <script type= 'text/javascript'>
+	$(function(){
+		$('.loginSubmit').on('click',function(){
+			var userName = $('.userName').val(),
+				password = $('.password').val();
+			if (userName == 'Abhishek') {
+				window.location.href= "http://localhost:8080/innovista-master/index.html";
+			}
+			else if (userName === 'Sasi') {
+				window.location.href= "http://localhost:8080/innovista-master/adminindex.html";
+			}
+		});
+	});
+	</script>
+  </head>
+  <body id="login">
+    <div class="container">
+
+      <div class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="input-block-level userName" placeholder="UserName">
+        <input type="password" class="input-block-level password" placeholder="Password">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-large btn-primary loginSubmit">Sign in</button>
+      </div>
+
+    </div> <!-- /container -->
+    <script src="vendors/jquery-1.9.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

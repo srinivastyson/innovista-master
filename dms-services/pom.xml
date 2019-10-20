@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.verizon</groupId>
+	<artifactId>dms-services</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>DMS Services</name>
+	<description>DMS Services</description>
+
+	<parent>
+		<groupId>org.verizon</groupId>
+	    <artifactId>innovista</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<!-- internal dependencies -->
+		<dependency>
+			<groupId>org.verizon</groupId>
+			<artifactId>common-library</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- static dependencies -->
+		<dependency>
+			<groupId>org.nuxeo.java.client</groupId>
+			<artifactId>nuxeo-java-client</artifactId>
+			<version>0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/../compiled-libraries/nuxeo-java-client/nuxeo-java-client-0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+
+		<!-- server libraries -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+	    </dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Third Party -->
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-core</artifactId>
+			<version>1.4.23</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

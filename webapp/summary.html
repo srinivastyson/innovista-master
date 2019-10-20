@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Summary</title>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+        <link href="assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="vendors/flot/excanvas.min.js"></script><![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2" id="sidebar">
+                    <div class="navbar  block-header">
+						<div class="control-group">
+						  <div class="controls">
+							 <legend><i class="icon-folder-open"></i>&nbsp;&nbsp;<i class="icon-pencil"></i>&nbsp;&nbsp;<i class="icon-refresh"></i></legend>	
+							 <label class="control-label" ><i class="icon-tasks"></i><font color='#66b3ff'>Domain</font></label> 				
+							 <label class="control-label" >&nbsp;&nbsp;<i class="icon-check"></i><font color='#66b3ff'>Sections</font></label> 					
+							 <label class="control-label" >&nbsp;&nbsp;&nbsp;<i class="icon-list-alt"></i><font color='#66b3ff'>Templates</font></label> 			
+							 <label class="control-label" >&nbsp;&nbsp;&nbsp;<i class="icon-book"></i><font color='#66b3ff'>Workspaces</font></label> 				
+							 <label class="control-label" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-stop"></i><font color='#66b3ff'>Documents</font></label> 				
+							 <label class="control-label" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-check"></i><font color='#66b3ff'>VRD Documents</font></label> 														 
+							 <label class="control-label" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-check"></i>Legacy Documents</label> 	
+							</div>
+						 </div>                    
+					</div>	
+                </div>
+				
+				
+                <!--/span-->
+                <div class="span10" id="content">
+                      <!-- morris stacked chart -->
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+							
+							 <div class="navbar navbar-inner block-header">
+                                <div class="muted pull-left">
+								<ul class="nav">
+									<li class="active summaryLi">
+										<a href="#" class='summaryToggle'>Summary</a>
+									</li>
+									<li class='editLi'>
+										<a href="#" class='editToggle'>Edit</a>
+									</li>
+									<li class='filesLi'>
+										<a href="#" class='filesToggle'>Files</a>
+									</li>
+									<!--<li>
+										<a href="#">Permissions</a>
+									</li>
+									<li>
+										<a href="#">Publish</a>
+									</li>
+									<li>
+										<a href="#">Relations</a>
+									</li>
+									<li>
+										<a href="#">Comments</a>
+									</li>-->
+									<li class='historyLi'>
+										<a href="#" class='historyToggle'>History</a>
+									</li>
+									<li class='manageLi'>
+										<a href="#" class='manageToggle'>Manage</a>
+									</li>
+									
+								</ul>	
+								</div>
+                            </div>
+							<!--Form for summary tab-->
+							<form class="form-horizontal summaryForm">
+								<div class="block-content collapse in">
+									<div class="span6">
+										 
+										  <fieldset>
+											<legend>Content</legend>
+											<div class="control-group" for="focusedInput">
+											  <label class="control-label" >Main File</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="main_file">Exapmle.odt</label>	
+												<i class="icon-download-alt pull-right"></i>												
+											  </div>
+											</div>
+											
+											
+											<legend>Common METADATA</legend>
+											<div class="control-group">
+											  <label class="control-label" for="focusedInput">Source</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="source">doc.nuxeo.com</label>												
+											  </div>
+											</div>
+											<div class="control-group">
+											  <label class="control-label" for="focusedInput">Created at</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="created_at">10/30/2013 9.36PM</label>												
+											  </div>
+											</div>
+											<div class="control-group">
+											  <label class="control-label" for="focusedInput">Last Modified at</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="last_modified_at">10/31/2013 9.36PM</label>												
+											  </div>
+											</div>
+											<div class="control-group">
+											  <label class="control-label" for="focusedInput">Author</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="author">John Doe</label>												
+											  </div>
+											</div>
+											<div class="control-group">
+											  <label class="control-label" for="focusedInput">Contributors</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="contributors">John Doe and Administrator</label>												
+											  </div>
+											</div>
+											<div class="control-group">
+											  <label class="control-label" for="focusedInput">Last Contributor</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="last_contributor">Administrator</label>												
+											  </div>
+											</div>
+										  </fieldset>
+										
+									</div>
+								
+									<div class="span6">
+										 
+											<div class="control-group">
+											  <br></br>
+											  <label class="control-label" for="focusedInput">Created by</label>
+											  <div class="control-group warning">
+												<label class="control-label" for="focusedInput" id="created_by">John Doe</label><br />											
+											  </div>											  
+											</div>
+																						  
+											<div class="control-group warning">
+												<label class="control-label" for="focusedInput">Oct 30,2013</label>
+												<label class="pull-right" for="focusedInput">Version 0.2+</label>
+											</div>
+											<legend>STATE</legend>
+											<div class="control-group" for="focusedInput">
+											  <input class="input-xlarge focused" id="focusedInput" type="text" value="Project">
+											</div>
+											<legend>WORKFLOW PROCESS</legend>
+											<div class="control-group" for="focusedInput">
+												<select id="selectError">
+												  <option>Parallel document review</option>
+												</select>
+												<p>
+												<button class="btn btn-mini">Start</button>
+												</p>
+											</div>
+											<legend>CONTRIBUTORS</legend>
+											<div class="control-group" for="focusedInput">
+											  <button class="btn"><i class="icon-user"></i> John Doe</button>
+											  <button class="btn"><i class="icon-user"></i> Adminstrator</button>
+											</div>
+											
+									   
+									</div>
+								</div>
+							</form>
+							<!--Form for edit tab-->
+							<form class="form-horizontal editForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Title</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Description</label>
+												  <div class="controls">
+													<textarea class="input-xlarge textarea" placeholder="Enter text ..." style="width: 810px; height: 200px"></textarea>
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">G A R M</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">G S A M</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="gsam" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="fileInput">Content</label>
+												  <div class="controls">
+													<input class="input-file uniform_on" id="content" type="file">
+												  </div>
+												</div>
+												<div class="control-group">
+													  <label class="control-label" for="focusedInput">Expired</label>
+													  <div class="controls">
+														<input class="input-xlarge focused" id="focusedInput" type="text" value="">
+													  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Change Comment</label>
+												  <div class="controls">
+													<textarea style="width: 810px; height: 200px" id="change_comment"></textarea>
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Version</label>
+												  <div class="controls">
+													<label class="control-label" for="focusedInput">0.0</label>
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="optionsCheckbox">Update Versions</label>
+												  <div class="controls">
+													<label class="uniform">
+													  <input class="uniform_on" type="radio" id="update_version" value="skip" checked="true">Skip increment version</input>
+													  </label>
+												  </div>
+												  <div class="controls">
+													<label class="uniform">
+													  <input class="uniform_on" type="radio" id="update_version" value="minor">Increment minor version</input>
+													  </label>
+												  </div>
+												  <div class="controls">
+													<label class="uniform">
+													  <input class="uniform_on" type="radio" id="update_version" value="major">Increment major version
+													</label>
+												  </div>
+												</div>
+											<div class="form-actions">
+											  <button type="submit" class="btn btn-danger">Save changes</button>
+											  <button type="reset" class="btn">Cancel</button>
+											</div>			
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+							<!-- for history tab-->
+							<form class="form-horizontal historyForm" style='display:none'>		
+							<!-- block -->
+								<div class="block">
+									<div class="block-content collapse in">
+										<div class="span12">
+											
+											<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+												<thead>
+													<tr>
+														<th>Performed Action</th>
+														<th>Date</th>
+														<th>Username</th>
+														<th>Category</th>
+														<th>Directive</th>
+														<th>Due Date</th>
+														<th>Comments</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Download</td>
+														<td>24/03/2015 3:03AM</td>
+														<td>Adminstrator</td>
+														<td>Document</td>
+														<td></td>
+														<td> </td>
+														<td>Working Types</td>
+													</tr>
+													<tr>
+														<td>Modification</td>
+														<td>24/03/2016 3:02AM</td>
+														<td>Adminstrator</td>
+														<td>Document</td>
+														<td></td>
+														<td> </td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>Download</td>
+														<td>24/03/2015 3:03AM</td>
+														<td>Adminstrator</td>
+														<td>Document</td>
+														<td></td>
+														<td> </td>
+														<td>Working Types</td>
+													</tr>
+													<tr>
+														<td>Creation</td>
+														<td>21/01/2016 9:01AM</td>
+														<td>Adminstrator</td>
+														<td>Document</td>
+														<td></td>
+														<td> </td>
+														<td></td>
+													</tr>
+													
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- /block -->
+							</form>
+							<!--Form for manage tab-->
+							<form class="form-horizontal manageForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+										        <legend>Alerts</legend>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Users or Groups&nbsp;&nbsp;</label>
+												  <input class="input-xlarge focused span6" id="title" type="text" value="Search for users or groups">
+												</div>												 
+												<div class="control-group" for="focusedInput">
+												   <label class="control-label" for="focusedInput">Actions&nbsp;&nbsp;</label>
+													<select id="selectError">
+													  <option>Subscribe</option>
+													</select>
+												</div>
+												<div class="control-group" for="focusedInput">
+												   <label class="control-label" for="focusedInput">Alerts&nbsp;&nbsp;</label>
+													<select id="selectError">
+													  <option>New Comment</option>
+													</select>
+												</div>
+												<div class="form-actions">
+												  <button type="submit" class="btn btn-danger">Register</button>
+												</div>			
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+							<!--Form for files tab-->
+							<form class="form-horizontal filesForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+										        <legend>Upload your files</legend>												
+												<div class="control-group">
+												  <label class="control-label" for="fileInput">Add</label>
+												  <div class="controls">
+													<input class="input-file uniform_on" id="add_files" type="file">
+												  </div>
+												</div>	
+												<div class="control-group">
+												  <div class="controls">
+												  <button class="btn"><i class="icon-remove icon-grey"></i> vzlogo_lg.png</button>		
+												  </div>
+												</div>	
+												<div class="control-group">
+												  <div class="controls">
+												  <button class="btn"><i class="icon-remove icon-grey"></i> mobileftv_redcheck.png</button>		
+												  </div>
+												</div>	
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+                        </div>
+                        <!-- /block -->
+                    </div>
+                </div>
+            </div>
+            <hr>
+            
+        </div>
+        <!--/.fluid-container-->
+        <link href="vendors/datepicker.css" rel="stylesheet" media="screen">
+        <link href="vendors/uniform.default.css" rel="stylesheet" media="screen">
+        <link href="vendors/chosen.min.css" rel="stylesheet" media="screen">
+
+        <link href="vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
+
+        <script src="vendors/jquery-1.9.1.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery.uniform.min.js"></script>
+        <script src="vendors/chosen.jquery.min.js"></script>
+        <script src="vendors/bootstrap-datepicker.js"></script>
+
+        <script src="vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
+        <script src="vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
+
+        <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+	<script type="text/javascript" src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="assets/form-validation.js"></script>
+        <script src="vendors/datatables/js/jquery.dataTables.min.js"></script>
+        
+	<script src="assets/scripts.js"></script>
+        <script src="assets/DT_bootstrap.js"></script>
+        <script>
+        $(function() {
+            
+        });
+        </script>
+        <script>
+
+	jQuery(document).ready(function() {   
+	   FormValidation.init();
+	});
+	
+
+        $(function() {
+            $(".datepicker").datepicker();
+            $(".uniform_on").uniform();
+            $(".chzn-select").chosen();
+            $('.textarea').wysihtml5();
+
+            $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index+1;
+                var $percent = ($current/$total) * 100;
+                $('#rootwizard').find('.bar').css({width:$percent+'%'});
+                // If it's the last tab then hide the last button and show the finish instead
+                if($current >= $total) {
+                    $('#rootwizard').find('.pager .next').hide();
+                    $('#rootwizard').find('.pager .finish').show();
+                    $('#rootwizard').find('.pager .finish').removeClass('disabled');
+                } else {
+                    $('#rootwizard').find('.pager .next').show();
+                    $('#rootwizard').find('.pager .finish').hide();
+                }
+            }});
+            $('#rootwizard .finish').click(function() {
+                alert('Finished!, Starting over!');
+                $('#rootwizard').find("a[href*='tab1']").trigger('click');
+            });
+			
+			$('.editToggle').on('click',function() {
+				$('.summaryForm').css('display','none');
+				$('.manageForm').css('display','none');
+				$('.historyForm').css('display','none');
+				$('.filesForm').css('display','none');
+				$('.editForm').css('display','');
+				$('.summaryLi').removeClass('active');		
+				$('.historyLi').removeClass('active');
+				$('.manageLi').removeClass('active');
+				$('.filesLi').removeClass('active');
+				$('.editLi').addClass('active');
+			});
+			
+			$('.summaryToggle').on('click',function() {
+				$('.editForm').css('display','none');
+				$('.manageForm').css('display','none');
+				$('.historyForm').css('display','none');
+				$('.filesForm').css('display','none');
+				$('.summaryForm').css('display','');
+				$('.editLi').removeClass('active');				
+				$('.historyLi').removeClass('active');
+				$('.manageLi').removeClass('active');
+				$('.filesLi').removeClass('active');
+				$('.summaryLi').addClass('active');
+			});
+			
+			$('.historyToggle').on('click',function() {
+				$('.summaryForm').css('display','none');
+				$('.manageForm').css('display','none');
+				$('.editForm').css('display','none');
+				$('.filesForm').css('display','none');
+				$('.historyForm').css('display','');
+				$('.summaryLi').removeClass('active');
+				$('.editLi').removeClass('active');	
+				$('.manageLi').removeClass('active');
+				$('.filesLi').removeClass('active');
+				$('.historyLi').addClass('active');
+			});
+			
+			$('.manageToggle').on('click',function() {
+				$('.summaryForm').css('display','none');
+				$('.historyForm').css('display','none');
+				$('.editForm').css('display','none');
+				$('.filesForm').css('display','none');
+				$('.manageForm').css('display','');
+				$('.summaryLi').removeClass('active');
+				$('.editLi').removeClass('active');			
+				$('.historyLi').removeClass('active');
+				$('.filesLi').removeClass('active');
+				$('.manageLi').addClass('active');
+			});
+			
+			$('.filesToggle').on('click',function() {
+				$('.summaryForm').css('display','none');
+				$('.historyForm').css('display','none');
+				$('.editForm').css('display','none');
+				$('.manageForm').css('display','none');
+				$('.filesForm').css('display','');
+				$('.summaryLi').removeClass('active');
+				$('.editLi').removeClass('active');			
+				$('.historyLi').removeClass('active');	
+				$('.manageLi').removeClass('active');
+				$('.filesLi').addClass('active');
+			});
+        });
+        </script>
+    </body>
+
+</html>

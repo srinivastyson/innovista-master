@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="no-js">
+    
+    <head>
+        <title>Admin Home Page</title>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+		<link href="dropzone.css" rel="stylesheet" media="screen">
+		 <script src="dropzone.js"></script>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		
+       
+    </head>
+    
+    <body>
+	
+	<div style='width: 50%'>
+				<form method="POST" enctype="multipart/form-data" action="http://localhost:8080/loadbalancer/dms/upload" class="dropzone">
+			File to upload: <input type="file" name="file"><br /> <br /> <input type="submit" value="Upload"> Press here to upload
+			the file!
+		</form>
+	</div>
+	    <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+        $(function() {
+            // Easy pie charts
+			
+			// jQuery
+			$('#dialog_upload').dialog('close');
+        });
+        </script>
+		
+		<div class="control-group" for="focusedInput">
+												   <label class="control-label" for="focusedInput">Select File Type&nbsp;&nbsp;</label>
+													<select id="selectFileType" value="Select option">
+													  <option>Select File Type</option>
+													  <option id="rfp" value="RFP">RFP</option>
+													  <option id="contract" value="Contract">Contract</option>
+													  <option>Product</option>
+													  <option>Pricing</option>
+													  <option>Quoting</option>
+													</select>
+		</div>
+		
+		<form class="form-horizontal rfpForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">RFP ID</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Customer Name</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Location</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="form-actions">
+												  <button id="uploadDetails" type="submit" class="btn btn-danger uploadDetails">Upload</button>
+												</div>	
+													
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+							
+							<form class="form-horizontal contractForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Contract ID</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Customer Name</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Location</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="form-actions">
+												  <button type="submit" class="btn btn-danger">Upload</button>
+												</div>	
+													
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+							<form class="form-horizontal productForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Product ID</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Product Name</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Location</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="form-actions">
+												  <button type="submit" class="btn btn-danger">Upload</button>
+												</div>	
+													
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+							<form class="form-horizontal pricingForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Invoice ID</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Customer Name</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Quantity</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Location</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="form-actions">
+												  <button type="submit" id ='upload_button' class="btn btn-danger uploadBtnTrigger">Upload</button>
+												</div>	
+													
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+							<form class="form-horizontal quotingForm" style='display:none'>							
+								<div class="block-content collapse in">
+									<div class="span12">										 
+										  <fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Quote ID</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="title" type="text" value="image">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Customer Name</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="focusedInput">Location</label>
+												  <div class="controls">
+													<input class="input-xlarge focused" id="garm" type="text" value="">
+												  </div>
+												</div>
+												<div class="form-actions">
+												  <button type="submit" class="btn btn-danger" >Upload</button>
+												</div>	
+													
+										</fieldset>										
+									</div>								
+								</div>	
+							</form>
+												
+    
+	<link href="vendors/datepicker.css" rel="stylesheet" media="screen">
+        <link href="vendors/uniform.default.css" rel="stylesheet" media="screen">
+        <link href="vendors/chosen.min.css" rel="stylesheet" media="screen">
+
+        <link href="vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
+
+        <script src="vendors/jquery-1.9.1.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery.uniform.min.js"></script>
+        <script src="vendors/chosen.jquery.min.js"></script>
+        <script src="vendors/bootstrap-datepicker.js"></script>
+
+        <script src="vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
+        <script src="vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
+
+        <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+	<script type="text/javascript" src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="assets/form-validation.js"></script>
+        <script src="vendors/datatables/js/jquery.dataTables.min.js"></script>
+        
+	<script src="assets/scripts.js"></script>
+        <script src="assets/DT_bootstrap.js"></script>
+<script>
+	  $("#selectFileType").change(function(){
+          if ($(this).val() == "RFP") {
+                
+                $('.rfpForm').show('');
+				$('.contractForm').hide('');
+				$('.productForm').hide('');
+				$('.pricingForm').hide('');
+				$('.quotingForm').hide('');
+          }
+		  if ($(this).val() == "Contract") {
+                
+				$('.rfpForm').hide('');
+                $('.contractForm').show('');
+				$('.productForm').hide('');
+				$('.pricingForm').hide('');
+				$('.quotingForm').hide('');
+          }
+		  if ($(this).val() == "Product") {
+                
+				$('.rfpForm').hide('');
+				$('.contractForm').hide('');
+                $('.productForm').show('');
+				$('.pricingForm').hide('');
+				$('.quotingForm').hide('');
+          }
+		  if ($(this).val() == "Pricing") {
+                
+				$('.rfpForm').hide('');
+				$('.contractForm').hide('');
+				$('.productForm').hide('');
+                $('.pricingForm').show('');
+				$('.quotingForm').hide('');
+          }
+		  if ($(this).val() == "Quoting") {
+                
+				$('.rfpForm').hide('');
+				$('.contractForm').hide('');
+				$('.productForm').hide('');
+                $('.quotingForm').show('');
+				$('.pricingForm').hide('');
+				
+          }
+		  });
+		  
+		  $("#rfpForm").submit(function(){										
+				location.href = "index.html";
+		  });
+   
+</script>
+</body>
+</html>
